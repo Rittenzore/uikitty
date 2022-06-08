@@ -1,0 +1,36 @@
+PODS:
+  - ADragDropView (1.0.3)
+  - AEXML (4.6.1)
+  - PathKit (1.0.1)
+  - SwiftyXML (3.0.4)
+  - xcodeproj (7.19.0):
+    - AEXML (~> 4.6.0)
+    - PathKit (~> 1.0.0)
+  - XMLCoder (0.13.1)
+
+DEPENDENCIES:
+  - ADragDropView
+  - SwiftyXML
+  - xcodeproj (~> 7.19.0)
+  - XMLCoder
+
+SPEC REPOS:
+  trunk:
+    - ADragDropView
+    - AEXML
+    - PathKit
+    - SwiftyXML
+    - xcodeproj
+    - XMLCoder
+
+SPEC CHECKSUMS:
+  ADragDropView: 556fb85e52360c2a05bcf5539c4c4ec8b457824c
+  AEXML: 1e255ecc6597212f97a7454a69ebd3ede64ac1cf
+  PathKit: 83b97c9c61b62e61ecafd598b33b2782575c33e4
+  SwiftyXML: afa603d3ef7ce88ef19879d7324c05b5a5fe6672
+  xcodeproj: ec17df7f66388e9441667fa8d34c38b6def62b87
+  XMLCoder: bd962586bc6777a9e6a17bc84d97a3c5413a9495
+
+PODFILE CHECKSUM: 2d30c2556432bfed183a4ca8ab3596704c6b1e2e
+
+COCOAPODS: 1.11.2

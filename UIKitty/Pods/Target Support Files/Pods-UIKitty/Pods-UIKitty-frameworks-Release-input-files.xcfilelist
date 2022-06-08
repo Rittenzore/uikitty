@@ -1,0 +1,7 @@
+${PODS_ROOT}/Target Support Files/Pods-UIKitty/Pods-UIKitty-frameworks.sh
+${BUILT_PRODUCTS_DIR}/ADragDropView/ADragDropView.framework
+${BUILT_PRODUCTS_DIR}/AEXML/AEXML.framework
+${BUILT_PRODUCTS_DIR}/PathKit/PathKit.framework
+${BUILT_PRODUCTS_DIR}/SwiftyXML/SwiftyXML.framework
+${BUILT_PRODUCTS_DIR}/XMLCoder/XMLCoder.framework
+${BUILT_PRODUCTS_DIR}/xcodeproj/XcodeProj.framework

@@ -295,6 +295,7 @@ class ElementGenerator {
             return """
             override func viewDidLoad() {
                     super.viewDidLoad()
+                    view.backgroundColor = .white
                     setupView()
                 }
             """
@@ -303,6 +304,7 @@ class ElementGenerator {
             return """
             override init(frame: CGRect) {
                     super.init(frame: frame)
+                    backgroundColor = .white
                     setupView()
                 }
                                         
@@ -315,6 +317,8 @@ class ElementGenerator {
     
     private func addViewsOnSubviews() -> String {
         let contentViewId = contentViewModel?.elementId.replacingOccurrences(of: "-", with: "")
+        let contentViewSafeAreaId = contentViewModel?.safeAreaId?.replacingOccurrences(of: "-", with: "") ?? "nil"
+        
         var constraintRulesString: String = ""
         
         var itemsArray = [String]()
@@ -335,9 +339,19 @@ class ElementGenerator {
         
         // Добавление сабвьюх на вьюху
         itemsArray.forEach({
-            var constraintRule = isVc ? "view." : ""
-            constraintRule.append("addSubview(i\($0))\n        ")
-            constraintRulesString.append(constraintRule)
+            if isVc {
+                if $0 != contentViewSafeAreaId {
+                    var constraintRule = isVc ? "view." : ""
+                    constraintRule.append("addSubview(i\($0))\n        ")
+                    constraintRulesString.append(constraintRule)
+                }
+            } else {
+                if $0 != contentViewId {
+                    var constraintRule = isVc ? "view." : ""
+                    constraintRule.append("addSubview(i\($0))\n        ")
+                    constraintRulesString.append(constraintRule)
+                }
+            }
         })
         
         return "\(constraintRulesString)"
